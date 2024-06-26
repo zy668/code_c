@@ -1,17 +1,34 @@
 #include <stdio.h>
-#include <string.h>
-
-void print(char *mode, void a[], int num) {
-    int n = sizeof(a[0]) * num;
-    int i;
-    if (n == sizeof(int)) {
-        int *p = a;
-        printf("%p %p", &p[1], &p[2]);
-    }
+void swap(char *a,char *b)
+{
+	int c = *a;
+	*a = *b;
+	*b = c;
 }
-
-int main() {
-    int a[10] = {1, 2, 3, 4, 5, 6, 7};
-    print("%d",a, 10);
-    return 0;
+void permutation(char a[], int start, int end)
+{
+	int i;
+	if (start == end)
+	{
+		for (i = 0; i <= end; i++)
+		{
+			printf("%c ", a[i]);
+		}
+		putchar('\n');
+	}
+	else
+	{
+		for (i = start; i <= end; i++)
+		{
+			swap(&a[start], &a[i]);
+			permutation(a, start + 1, end);
+			swap(&a[start], &a[i]);
+		}
+	}
+}
+int main()
+{
+	char s[4] = "abc";
+	permutation(s, 0, 2);
+	return 0;
 }

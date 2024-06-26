@@ -1,23 +1,25 @@
 {
-  "configurations": [
-    {
-      "MIMode": "gdb",
-      "args": [],
-      "cwd": "${fileDirname}",
-      "env": {
-        "PATH": "C:\\Program Files\\mingw\\mingw64\\bin;${env:PATH}"
-      },
-      "environment": [],
-      "externalConsole": true,
-      "internalConsosleOptions": "neverOpen",
-      "miDebuggerPath": "C:\\Program Files\\mingw\\mingw64\\bin\\gdb.exe",
-      "name": "single file debug",
-      "preLaunchTask": "single file build",
-      "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
-      "request": "launch",
-      "stopAtEntry": false,
-      "type": "cppdbg"
-    }
-  ],
-  "version": "0.2.0"
-}
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "C: Debug Current File",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "miDebuggerPath": "D:\\Program Files\\mingw\\mingw64\\bin\\gdb.exe",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        }
+    ]
+}  

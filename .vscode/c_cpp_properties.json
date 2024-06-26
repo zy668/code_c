@@ -2,7 +2,7 @@
   "configurations": [
     {
       "cStandard": "c17",
-      "compilerPath": "C:\\Program Files\\mingw\\mingw64\\bin\\gcc.exe",
+      "compilerPath": "D:\\Program Files\\mingw\\mingw64\\bin\\gcc.exe",
       "includePath": [
         "${{workspaceFolder}}/**"
       ],

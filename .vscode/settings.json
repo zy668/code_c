@@ -1,5 +1,3 @@
 {
-    "files.associations": {
-        "bf字符串搜索": "c"
-    }
+  "C_Cpp.errorSquiggles": "enabled"
 }
